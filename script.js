@@ -1,7 +1,7 @@
 const chatBox = document.getElementById("chatBox");
 const input = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
-
+const micBtn = document.getElementById("micBtn");
 function addMessage(text, type) {
     const div = document.createElement("div");
     div.className = type;
@@ -56,3 +56,33 @@ input.addEventListener("keypress", function(e) {
         sendMessage();
     }
 });
+const SpeechRecognition =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+if (SpeechRecognition) {
+
+    const recognition = new SpeechRecognition();
+
+    recognition.lang = "hi-IN";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    micBtn.addEventListener("click", () => {
+        recognition.start();
+    });
+
+    recognition.onresult = (event) => {
+
+        const text = event.results[0][0].transcript;
+
+        input.value = text;
+
+        sendMessage();
+    };
+
+} else {
+
+    alert("Speech Recognition इस ब्राउज़र में उपलब्ध नहीं है.");
+
+}
