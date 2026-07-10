@@ -2,7 +2,23 @@ const chatBox = document.getElementById("chatBox");
 const input = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
 const micBtn = document.getElementById("micBtn");
-function addMessage(text, type) {
+function addMessage(text, type) {function speak(text){
+
+    const speech = new SpeechSynthesisUtterance();
+
+    speech.text = text;
+
+    speech.lang = "hi-IN";
+
+    speech.rate = 1;
+
+    speech.pitch = 1;
+
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
+
+}
     const div = document.createElement("div");
     div.className = type;
     div.innerHTML = text;
@@ -43,8 +59,12 @@ function sendMessage() {
     const reply = aiReply(message);
 
     setTimeout(() => {
-        addMessage(reply, "ai");
-    }, 500);
+
+    addMessage(reply, "ai");
+
+    speak(reply);
+
+}, 500);
 
     input.value = "";
 }
