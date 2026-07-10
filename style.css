@@ -99,3 +99,14 @@ button{
     font-size:22px;
     cursor:pointer;
 }
+#status{
+
+    text-align:center;
+
+    color:#00ff88;
+
+    padding:8px;
+
+    font-size:14px;
+
+}
