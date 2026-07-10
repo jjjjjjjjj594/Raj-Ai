@@ -150,3 +150,29 @@ button{
     50%{transform:translate(-50%,-50%) scale(1.2);}
     100%{transform:translate(-50%,-50%) scale(1);}
 }
+#statusText{
+    text-align:center;
+    color:#00d4ff;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.listening .core{
+    animation:listeningPulse .6s infinite;
+}
+
+@keyframes listeningPulse{
+    0%{
+        transform:translate(-50%,-50%) scale(1);
+        box-shadow:0 0 20px #00d4ff;
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1.5);
+        box-shadow:0 0 60px #00d4ff;
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(1);
+        box-shadow:0 0 20px #00d4ff;
+    }
+}
