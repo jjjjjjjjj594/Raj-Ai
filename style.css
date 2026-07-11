@@ -350,7 +350,8 @@ box-shadow:0 0 30px rgba(0,212,255,.25);
     }
 }
 .topbar{
-
+border-bottom:1px solid rgba(0,212,255,.3);
+box-shadow:0 0 20px rgba(0,212,255,.15);
 display:flex;
 
 justify-content:space-between;
