@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raj AI</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<div class="background">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+
 <div class="app">
-<div class="bg-animation">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+
+<header>
+
+<div class="logo">
+
+🤖 <span>Raj AI</span>
+
 </div>
-  <header>
-    <header class="topbar">
-    <div class="menu">☰</div>
 
-    <div class="title">
-        <h1>🤖 Raj AI</h1>
-        <p>Your Personal AI Assistant</p>
-    </div>
+<div class="online">
 
-    <div class="clock">🕘</div>
+🟢 Online
+
+</div>
+
 </header>
 
-<div class="holo">
+<section class="hero">
 
-    <div class="ring r1"></div>
+<div class="orb">
 
-    <div class="ring r2"></div>
+<div class="ring ring1"></div>
 
-    <div class="ring r3"></div>
+<div class="ring ring2"></div>
 
-    <div class="core">R</div>
+<div class="ring ring3"></div>
+
+<div class="core">R</div>
 
 </div>
 
-<div id="statusText">
-🟢 Ready
+<h2>Your Personal AI Assistant</h2>
+
+<p>Ask anything...</p>
+
+</section>
+
+<section id="chatBox" class="chatBox">
+
+<div class="aiMessage">
+
+👋 Hello Rajpal!<br>
+
+मैं Raj AI हूँ। आपकी कैसे मदद कर सकता हूँ?
+
 </div>
- <div class="voice-wave">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+
+</section>
+
+<div class="inputBar">
+
+<button id="micBtn">🎤</button>
+
+<input
+id="userInput"
+type="text"
+placeholder="Type your message..."
+>
+
+<button id="sendBtn">➤</button>
+
 </div>
-
-<div class="chat-card">
-    <div class="ai-msg">
-        👋 Hello Rajpal!<br>
-        मैं <b>Raj AI</b> हूँ। आपकी कैसे मदद कर सकता हूँ?
-    </div>
-  <div class="input-area">
-
-    <button id="plusBtn">✦</button>
-
-    <input
-        type="text"
-        id="userInput"
-        placeholder="Type a message..."
-    >
-
-    <button id="micBtn">🎤</button>
-
-    <button id="sendBtn">➤</button>
 
 </div>
 
 <script src="script.js"></script>
-<nav class="bottom-nav">
 
-<div>💬<br>Chat</div>
-
-<div>🕘<br>History</div>
-
-<div>🎤<br>Voice</div>
-
-<div>⚙️<br>Settings</div>
-
-</nav>
 </body>
 </html>
