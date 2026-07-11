@@ -51,7 +51,12 @@ function aiReply(message) {
 function sendMessage() {
 
     const message = input.value.trim();
+const typing = document.createElement("div");
+typing.className = "typing";
+typing.innerHTML = "<span></span><span></span><span></span>";
 
+chatBox.appendChild(typing);
+chatBox.scrollTop = chatBox.scrollHeight;
     if (message === "") return;
 
     addMessage(message, "user");
