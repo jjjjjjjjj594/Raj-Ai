@@ -5,7 +5,7 @@ const micBtn = document.getElementById("micBtn");
 function addMessage(text, type) {function speak(text){
 const statusText = document.getElementById("statusText");
     const speech = new SpeechSynthesisUtterance();
-
+const voiceWave = document.getElementById("voiceWave");
     speech.text = text;
 
     speech.lang = "hi-IN";
