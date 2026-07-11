@@ -67,7 +67,20 @@ chatBox.scrollTop = chatBox.scrollHeight;
 typing.remove();
     addMessage(reply, "ai");
 
-    speak(reply);
+    function speak(text){
+
+    voiceWave.classList.add("active");
+
+    const speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = "hi-IN";
+
+    speech.onend = () => {
+        voiceWave.classList.remove("active");
+    };
+
+    window.speechSynthesis.speak(speech);
+}
 
 }, 500);
 
