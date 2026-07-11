@@ -87,7 +87,8 @@ if (SpeechRecognition) {
     recognition.lang = "hi-IN";
     recognition.continuous = false;
     recognition.interimResults = false;
-
+document.querySelector(".ai-orb").classList.add("listening");
+statusText.innerText = "🎤 Listening...";
     micBtn.addEventListener("click", () => {
         recognition.start();
     });
