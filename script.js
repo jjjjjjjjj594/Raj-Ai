@@ -7,7 +7,7 @@ const statusText = document.getElementById("statusText");
     const speech = new SpeechSynthesisUtterance();
 const voiceWave = document.getElementById("voiceWave");
     speech.text = text;
-
+const plusBtn = document.getElementById("plusBtn");
     speech.lang = "hi-IN";
 
     speech.rate = 1;
