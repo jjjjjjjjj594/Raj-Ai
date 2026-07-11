@@ -93,7 +93,8 @@ if (SpeechRecognition) {
     });
 
     recognition.onresult = (event) => {
-
+document.querySelector(".ai-orb").classList.remove("listening");
+statusText.innerText = "🤖 Thinking...";
         const text = event.results[0][0].transcript;
 
         input.value = text;
