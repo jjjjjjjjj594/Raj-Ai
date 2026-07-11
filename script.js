@@ -64,7 +64,7 @@ chatBox.scrollTop = chatBox.scrollHeight;
     const reply = aiReply(message);
 
     setTimeout(() => {
-
+typing.remove();
     addMessage(reply, "ai");
 
     speak(reply);
